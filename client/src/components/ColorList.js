@@ -25,13 +25,6 @@ const ColorList = ({ colors, updateColors }) => {
       .then(res => {
         console.log('colors', res.data);
         // updateColors([...colors, res.data]);
-        const nonChanged = colors.map(color => {
-          return color.id === colorToEdit.id ? colorToEdit : color;
-        })
-        const except = colors.filter(color => {
-          return color.id !== colorToEdit.id;
-        })
-        console.log('nonChanged', nonChanged);
         console.log('except', except);
         console.log('colorToEdit',colorToEdit)
         updateColors([...except, colorToEdit]);
