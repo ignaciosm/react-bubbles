@@ -6,7 +6,7 @@ const isAuthenticated = () => {
   return localStorage.getItem("token") ? true : false;
 };
 export default function PrivateRoute({ children, ...rest }) {
-  console.log("...rest", rest);
+  // console.log("...rest", rest);
   return (
     <Route
       {...rest}
