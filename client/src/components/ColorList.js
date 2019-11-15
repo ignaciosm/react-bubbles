@@ -25,6 +25,9 @@ const ColorList = ({ colors, updateColors }) => {
       .then(res => {
         console.log('colors', res.data);
         // updateColors([...colors, res.data]);
+        const except = colors.filter(color => {
+          return color.id !== colorToEdit.id;
+        })
         console.log('except', except);
         console.log('colorToEdit',colorToEdit)
         updateColors([...except, colorToEdit]);
