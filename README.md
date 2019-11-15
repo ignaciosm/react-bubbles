@@ -29,9 +29,13 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+***A token is used to confirm the identity of the user on the front end. The user adds its credentials and the server responds with the token, which can then be saved in the browser's session or local storage, and give access to components even after page loads***
 - [ ] What steps can you take in your web apps to keep your data secure?
+***Put the entire app behind a HTTPS protocol instead of HTTP. Use privateroutes to render components only to logged in users. On the server side, use encryption for the passwords as opposed to saving them as text in the DB.***
 - [ ] Describe how web servers work.
+***Webservers (the physical server) is a set of computers in a given location, that stores the data sent from the browser (the most common way). Using the HTTP protocol, the client (browser) sends information and requests to the server, identifing the server through their unique IP address***
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+***POST>CREATE:data is sent from the client to the server to create a new record in a DB. GET>READ: data is received by the client coming from the server. PUT>REPLACE(UPDATE): data is sent from the client to the server to update a record in a DB by replacing it. PATCH>MODIFY(UPDATE)data is sent from the client to the server to update a record in a DB by modifying it.***
 
 
 ## Project Set Up
