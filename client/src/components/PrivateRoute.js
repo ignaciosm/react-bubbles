@@ -1,0 +1,27 @@
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+
+const isAuthenticated = () => {
+  console.log('Private: Get', localStorage.getItem("token"))
+  return localStorage.getItem("token") ? true : false;
+};
+export default function PrivateRoute({ children, ...rest }) {
+  // console.log("...rest", rest);
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        isAuthenticated() ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
